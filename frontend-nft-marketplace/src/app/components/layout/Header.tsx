@@ -74,7 +74,7 @@ export const Header = () => {
           <div className="w-12 h-12 flex justify-center items-center">
             <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
           </div>
-          <h2>NFT-Marketplace</h2>
+          <h2 className="font-bold text-xl">NFT-Marketplace</h2>
         </div>
 
         {/* Search */}

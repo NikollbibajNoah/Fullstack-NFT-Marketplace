@@ -21,9 +21,8 @@ export const FooterNavLinks: React.FC<FooterNavLinksProps> = ({
       <h2 className="font-semibold mb-2">{title}</h2>
       <ul className="list-none">
         {items.map((link: FooterNavLinkConfig, i: number) => (
-          <li>
+          <li key={i}>
             <Link
-              key={i}
               isBlock={link.isBlock ? link.isBlock : true}
               color={link.color ? link.color : "foreground"}
               href={link.href}
