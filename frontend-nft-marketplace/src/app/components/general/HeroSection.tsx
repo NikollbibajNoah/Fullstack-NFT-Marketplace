@@ -37,7 +37,7 @@ export const HeroSection = () => {
 
   return (
     <Card className="w-full h-[512px] grid md:grid-cols-2 gap-8 p-20 bg-background/80 backdrop-blur-md">
-      {bannerImage && (
+      {/* {bannerImage && (
         <Image
           src={bannerImage}
           alt="NFT Artwork"
@@ -45,7 +45,7 @@ export const HeroSection = () => {
           height={600}
           className="absolute top-0 left-0 rounded-large object-cover w-full h-full shadow-lg"
         />
-      )}
+      )} */}
       <div className="backdrop-blur-md absolute w-full h-full"></div>
       <div className="flex flex-col justify-center z-10">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
