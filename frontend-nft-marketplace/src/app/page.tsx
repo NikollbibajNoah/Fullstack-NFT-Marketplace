@@ -1,4 +1,4 @@
-import { BigNFTSlider, HeroSection, ServiceSection } from "./components/general";
+import { BigNFTSlider, CategorySection, HeroSection, ServiceSection } from "./components/general";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <HeroSection />
       <ServiceSection />
       <BigNFTSlider />
+      <CategorySection />
     </div>
   );
 }

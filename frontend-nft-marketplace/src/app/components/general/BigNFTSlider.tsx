@@ -54,10 +54,17 @@ const sliderData: NFTCard[] = [
 
 export const BigNFTSlider = () => {
   return (
-    <section>
-      {sliderData.map((nftCard) => (
-        <BigNFTCard key={nftCard.id} nftCard={nftCard} />
-      ))}
+    <section className="w-full flex flex-col justify-center px-8 py-4 my-3">
+      <div>
+        <h2 className="text-2xl font-semibold">Todays NFT's</h2>
+        <p>Check out the latest and most popular NFTs of the day!</p>
+      </div>
+
+      <div className="w-full mx-auto flex items-center overflow-x-auto gap-4 py-4">
+        {sliderData.map((nftCard: NFTCard) => (
+          <BigNFTCard key={nftCard.id} nftCard={nftCard} controls={false} />
+        ))}
+      </div>
     </section>
   );
 };

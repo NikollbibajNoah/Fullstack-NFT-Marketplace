@@ -1,5 +1,6 @@
 import { NFTCard } from "@/lib/types";
 import { Card, Avatar, Input, Button } from "@heroui/react";
+import classNames from "classnames";
 import {
   FlameIcon,
   ClockIcon,
@@ -10,19 +11,21 @@ import {
 
 export type NFTCardProps = {
   nftCard: NFTCard;
+  controls?: boolean;
 };
 
-export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard }) => {
+export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard, controls }) => {
   return (
-    <Card className="w-[896px]">
-      <div className="flex flex-row gap-3">
-        <div className="max-w-md">
+    <Card className="w-[896px] flex-shrink-0">
+      <section className="flex flex-row gap-3">
+        {/* Info - Left side content */}
+        <div className="w-[384px]">
           <div className="p-4">
             <h2 className="text-2xl font-semibold">{nftCard.title}</h2>
             <div className="mt-3">
               <div className="flex items-center">
                 <div className="flex gap-2">
-                  <Avatar name="Noah" />
+                  <Avatar name={nftCard.name[0].toUpperCase()} />
                   <div>
                     <h2 className="text-sm">Creator</h2>
                     <h2>{nftCard.name}</h2>
@@ -81,6 +84,7 @@ export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard }) => {
             </div>
           </div>
 
+          {/* Place and View buttons */}
           <div className="p-4 max-w-xs">
             <div className="flex justify-around">
               <Button color="primary">Place</Button>
@@ -88,6 +92,8 @@ export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard }) => {
             </div>
           </div>
         </div>
+
+        {/* Preview - Right side content */}
         <div className="relative p-6 flex justify-center flex-1">
           <div className="bg-gray-500 absolute right-0 top-0 m-3 flex items-center gap-3 rounded-xl p-2">
             <HeartIcon />
@@ -95,9 +101,14 @@ export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard }) => {
           </div>
           <div className="w-full aspect-square rounded-xl bg-red-500"></div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex justify-center my-8">
+      {/* Bottom controls */}
+      <section
+        className={classNames("flex justify-center my-8", {
+          hidden: !controls,
+        })}
+      >
         <div className="w-[320px] flex justify-around">
           <Button>
             <ArrowLeftIcon />
@@ -106,7 +117,7 @@ export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard }) => {
             <ArrowRightIcon />
           </Button>
         </div>
-      </div>
+      </section>
     </Card>
   );
 };

@@ -8,9 +8,9 @@ export type NFTCard = {
     image: string; // URL to the image
     nftImage: string; // URL to the NFT image
     time: {
-      days: 2,
-      hours: 3,
-      minutes: 5,
-      seconds: 10,
+      days: number,
+      hours: number,
+      minutes: number,
+      seconds: number,
     },
 }
