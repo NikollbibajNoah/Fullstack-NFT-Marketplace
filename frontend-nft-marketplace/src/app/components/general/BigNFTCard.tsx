@@ -95,10 +95,13 @@ export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard, controls }) => {
 
         {/* Preview - Right side content */}
         <div className="relative p-6 flex justify-center flex-1">
-          <div className="bg-gray-500 absolute right-0 top-0 m-3 flex items-center gap-3 rounded-xl p-2">
+          <Button
+            color="danger"
+            className="absolute right-0 top-0 m-3 flex items-center gap-3 rounded-xl p-2"
+          >
             <HeartIcon />
             {nftCard.like}
-          </div>
+          </Button>
           <div className="w-full aspect-square rounded-xl bg-red-500"></div>
         </div>
       </section>

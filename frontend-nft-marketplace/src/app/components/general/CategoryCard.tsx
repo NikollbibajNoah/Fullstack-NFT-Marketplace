@@ -1,13 +1,21 @@
+import { Category } from "@/lib/types";
 import { Card } from "@heroui/react";
-import { Category } from "./CategorySection";
 
 export type CategoryCardProps = {
   category: Category;
+  onClick?: (category: Category) => void;
 };
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({
+  category,
+  onClick,
+}) => {
   return (
-    <Card className="flex-shrink-0 w-60 h-52">
+    <Card
+      className="flex-shrink-0 w-60 h-52"
+      isPressable
+      onPress={() => onClick?.(category)}
+    >
       <div className="p-4">
         <div className="rounded-xl w-full h-28 bg-red-500">{/* <img /> */}</div>
       </div>

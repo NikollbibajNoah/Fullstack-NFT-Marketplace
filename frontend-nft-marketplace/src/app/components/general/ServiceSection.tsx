@@ -27,11 +27,12 @@ const services = [
 
 export const ServiceSection = () => {
   return (
-    <section className="p-8">
+    <section className="px-8 py-4">
+      <div className="mb-4">
+        <h2 className="text-2xl font-semibold">Services</h2>
+        <p>Explore our diverse services</p>
+      </div>
       <div className="max-w-4xl flex flex-col mx-auto">
-        <div className="mb-3 flex justify-center">
-          <h2 className="text-2xl font-semibold text-foreground">Our Services</h2>
-        </div>
         <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
             {services.map((service, index) => (
