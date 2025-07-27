@@ -1,4 +1,4 @@
-import { NFTCard } from "@/lib/types";
+import { NFT } from "@/lib/types";
 import { Card, Avatar, Input, Button } from "@heroui/react";
 import classNames from "classnames";
 import {
@@ -9,12 +9,15 @@ import {
   ArrowRightIcon,
 } from "lucide-react";
 
-export type NFTCardProps = {
-  nftCard: NFTCard;
+export type BigNFTCardProps = {
+  nftCard: NFT;
   controls?: boolean;
 };
 
-export const BigNFTCard: React.FC<NFTCardProps> = ({ nftCard, controls }) => {
+export const BigNFTCard: React.FC<BigNFTCardProps> = ({
+  nftCard,
+  controls,
+}) => {
   return (
     <Card className="w-[896px] flex-shrink-0">
       <section className="flex flex-row gap-3">

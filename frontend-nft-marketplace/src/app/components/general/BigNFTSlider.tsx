@@ -1,7 +1,7 @@
-import { NFTCard } from "@/lib/types";
+import { NFT } from "@/lib/types";
 import { BigNFTCard } from "./BigNFTCard";
 
-const sliderData: NFTCard[] = [
+const sliderData: NFT[] = [
   {
     id: 1,
     title: "Hello NFT",
@@ -61,7 +61,7 @@ export const BigNFTSlider = () => {
       </div>
 
       <div className="w-full mx-auto flex items-center overflow-x-auto gap-4 py-4">
-        {sliderData.map((nftCard: NFTCard) => (
+        {sliderData.map((nftCard: NFT) => (
           <BigNFTCard key={nftCard.id} nftCard={nftCard} controls={false} />
         ))}
       </div>

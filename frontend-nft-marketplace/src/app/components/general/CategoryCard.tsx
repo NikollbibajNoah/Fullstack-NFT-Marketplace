@@ -1,3 +1,5 @@
+"use client";
+
 import { Category } from "@/lib/types";
 import { Card } from "@heroui/react";
 

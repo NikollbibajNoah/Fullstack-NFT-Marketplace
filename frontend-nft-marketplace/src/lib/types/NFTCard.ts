@@ -1,4 +1,4 @@
-export type NFTCard = {
+export type NFT = {
     id: number;
     title: string;
     name: string;

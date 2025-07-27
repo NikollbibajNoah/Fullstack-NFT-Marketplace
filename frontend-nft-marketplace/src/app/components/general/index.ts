@@ -5,3 +5,7 @@ export { BigNFTSlider } from "./BigNFTSlider";
 export { BigNFTCard } from "./BigNFTCard";
 export { CategorySection } from "./CategorySection";
 export { CategoryCard } from "./CategoryCard";
+export { FilterSection } from "./FilterSection";
+export { FilterButton } from "./FilterButton";
+export { NFTCardsSection } from "./NFTCardsSection";
+export { NFTCard } from "./NFTCard";
