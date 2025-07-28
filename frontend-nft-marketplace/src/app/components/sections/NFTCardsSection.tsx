@@ -1,5 +1,5 @@
 import { NFT } from "@/lib/types/NFTCard";
-import { NFTCard } from "./NFTCard";
+import { NFTCard } from "../cards/NFTCard";
 import { FilterSection } from "./FilterSection";
 
 export type NFTCardsSectionProps = {

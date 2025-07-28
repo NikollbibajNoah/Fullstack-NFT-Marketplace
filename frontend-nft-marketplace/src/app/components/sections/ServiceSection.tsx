@@ -1,5 +1,4 @@
-import { Card, CardHeader, CardBody } from "@heroui/react";
-import { ServiceCard } from ".";
+import { ServiceCard } from "../cards/ServiceCard";
 import { FilterIcon, TrendingUpIcon, WalletIcon } from "lucide-react";
 
 const services = [

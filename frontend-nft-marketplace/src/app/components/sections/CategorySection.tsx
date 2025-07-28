@@ -1,5 +1,5 @@
 import { Category } from "@/lib/types";
-import { CategoryCard } from "./CategoryCard";
+import { CategoryCard } from "../cards/CategoryCard";
 
 const categories: Category[] = [
   { name: "Art", total: 1200 },

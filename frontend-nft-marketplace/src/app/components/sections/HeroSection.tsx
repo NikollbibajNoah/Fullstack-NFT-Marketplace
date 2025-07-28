@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { Card, Button } from "@heroui/react";
-import { Icon, ShoppingBasketIcon, UploadIcon } from "lucide-react";
+import { ShoppingBasketIcon, UploadIcon } from "lucide-react";
 import Image from "next/image";
 
 import Herobanner01 from "../../../../public/hero/hero-01.png";

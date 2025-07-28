@@ -4,8 +4,8 @@ import {
   DropdownItem,
   DropdownMenu,
 } from "@heroui/react";
-import { MenuItemProps } from "../Header";
 import classNames from "classnames";
+import { MenuItemProps } from "../layout/Header";
 
 export type DropdownMenuProps = {
   children: React.ReactNode;

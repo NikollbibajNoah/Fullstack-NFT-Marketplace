@@ -1,12 +1,14 @@
 import { NFT } from "@/lib/types";
 import {
-  BigNFTSlider,
   CategorySection,
-  FilterSection,
   HeroSection,
   NFTCardsSection,
   ServiceSection,
-} from "./components/general";
+} from "./components/sections";
+import { BigNFTSlider } from "./components/ui";
+
+import Ape01 from "../../public/mock/apes/01.jpeg";
+import Ape02 from "../../public/mock/apes/02.jpeg";
 
 const sliderData: NFT[] = [
   {
@@ -17,7 +19,7 @@ const sliderData: NFT[] = [
     price: "0000006426 ETH",
     like: 212,
     image: "",
-    nftImage: "",
+    nftImage: Ape01.src,
     time: {
       days: 2,
       hours: 3,
@@ -33,7 +35,7 @@ const sliderData: NFT[] = [
     price: "000046912 ETH",
     like: 3224,
     image: "",
-    nftImage: "",
+    nftImage: Ape02.src,
     time: {
       days: 1,
       hours: 6,
@@ -49,7 +51,7 @@ const sliderData: NFT[] = [
     price: "00091912 ETH",
     like: 312,
     image: "",
-    nftImage: "",
+    nftImage: Ape01.src,
     time: {
       days: 1,
       hours: 6,

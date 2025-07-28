@@ -5,11 +5,11 @@ import {
   Input,
 } from "@heroui/react";
 import { SearchIcon } from "lucide-react";
-import { DropdownHeaderMenu, NotificationDropdownMenu } from "./shared";
-import { NotificationProps } from "./shared/NotificationDropdownMenu";
 import Image from 'next/image';
 
 import Logo from "../../../../public/Logo-nobackground.png";
+import { NotificationDropdownMenu, NotificationProps } from "../shared/NotificationDropdownMenu";
+import { DropdownHeaderMenu } from "../shared";
 
 export type MenuItemProps = {
   label: string;

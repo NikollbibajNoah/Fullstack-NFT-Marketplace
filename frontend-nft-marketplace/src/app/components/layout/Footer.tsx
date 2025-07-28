@@ -1,8 +1,9 @@
 import Image from 'next/image';
 
 import Logo from "../../../../public/Logo-nobackground.png";
+import { FooterNavLinks } from '../shared';
+import { FooterNavLinkConfig } from '../shared/FooterNavLinks';
 
-import { FooterNavLinkConfig, FooterNavLinks } from "./shared/FooterNavLinks";
 
 const discoverItems: FooterNavLinkConfig[] = [
   { label: "Explore", href: "#" },

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import { FilterButton } from "./FilterButton";
+import { FilterButton } from "../ui/FilterButton";
 import { ChevronDownIcon, FilterIcon } from "lucide-react";
 import { useState } from "react";
 import classNames from "classnames";

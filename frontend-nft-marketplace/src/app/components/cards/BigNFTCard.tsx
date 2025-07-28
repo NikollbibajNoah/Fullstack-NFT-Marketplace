@@ -8,6 +8,7 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
 } from "lucide-react";
+import Image from 'next/image';
 
 export type BigNFTCardProps = {
   nftCard: NFT;
@@ -105,7 +106,16 @@ export const BigNFTCard: React.FC<BigNFTCardProps> = ({
             <HeartIcon />
             {nftCard.like}
           </Button>
-          <div className="w-full aspect-square rounded-xl bg-red-500"></div>
+          <div className="w-full aspect-square rounded-xl bg-red-500">
+            <Image
+              alt={nftCard.title}
+              className="w-full h-full object-cover"
+              src={nftCard.nftImage || ""}
+              width={300}
+              height={300}
+              priority={false}
+            />
+          </div>
         </div>
       </section>
 
