@@ -1,4 +1,4 @@
-import { NFT } from "@/lib/types/NFTCard";
+import { NFT } from "@/lib/types/NFT";
 import { NFTCard } from "../cards/NFTCard";
 import { FilterSection } from "./FilterSection";
 

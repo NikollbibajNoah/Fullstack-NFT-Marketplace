@@ -1,2 +1,2 @@
-export type { NFT } from "./NFTCard";
+export type { NFT } from "./NFT";
 export type { Category } from "./Category";
