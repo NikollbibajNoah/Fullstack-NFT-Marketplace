@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class NFTResolver {
 
-    private NFTService nftService;
+    private final NFTService nftService;
 
     @QueryMapping
     public List<NFT> getAllNFTs() {

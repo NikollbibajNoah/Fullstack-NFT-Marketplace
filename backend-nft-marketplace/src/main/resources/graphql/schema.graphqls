@@ -1,0 +1,34 @@
+##### GraphQL Schema for NFT Marketplace #####
+
+# Types
+type NFT {
+    id: ID!
+    title: String!
+    owner: String!
+    collection: String
+    price: String
+    image: String
+    nftImage: String
+    metadataUrl: String
+}
+
+# Queries
+type Query {
+    getAllNFTs: [NFT!]!
+    getNFTById(id: ID!): NFT
+}
+
+# Mutations
+type Mutation {
+    createNFT(
+        title: String!
+        owner: String!
+        collection: String
+        price: String
+        image: String
+        nftImage: String
+        metadataUrl: String
+    ): NFT!
+
+    deleteNFT(id: ID!): String!
+}

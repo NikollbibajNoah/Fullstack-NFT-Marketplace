@@ -1,23 +1,17 @@
 server:
-    port: 8080
+  port: 8080
 
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/nft_marketplace?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: admin
+    password: admin
+
   jpa:
     hibernate:
       ddl-auto: none # Deaktiviert die automatische Schema-Generierung
     show-sql: false # SQL-Statements nicht anzeigen
-  datasource:
-    url: jdbc:h2:mem:testdb # In-Memory-Datenbank (optional, falls benötigt)
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
-    initialization-mode: never # Keine Initialisierung der Datenbank
-  sql:
-    init:
-      mode: never # Deaktiviert SQL-Skripte beim Start
-
-# Deaktiviert die Datenbank vollständig
-spring.main:
-  allow-bean-definition-overriding: true
-  web-application-type: servlet
-  lazy-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect

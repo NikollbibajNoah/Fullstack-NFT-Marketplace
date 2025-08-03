@@ -1,14 +1,16 @@
 package dev.nftmarketplace.backend_nft_marketplace.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 @Getter
 @Setter
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class NFT {
 
