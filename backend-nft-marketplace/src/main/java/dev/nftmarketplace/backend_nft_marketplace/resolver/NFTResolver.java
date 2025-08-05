@@ -3,6 +3,7 @@ package dev.nftmarketplace.backend_nft_marketplace.resolver;
 import dev.nftmarketplace.backend_nft_marketplace.entity.NFT;
 import dev.nftmarketplace.backend_nft_marketplace.service.NFTService;
 import lombok.AllArgsConstructor;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
@@ -21,17 +22,22 @@ public class NFTResolver {
     }
 
     @QueryMapping
-    public NFT getNFTById(String id) {
+    public NFT getNFTById(@Argument String id) {
         return nftService.getNFTById(id);
     }
 
     @MutationMapping
-    public NFT createNFT(String title, String owner, String collection, String price, String image, String nftImage, String metadataUrl) {
-        return nftService.createNFT(title, owner, collection, price, image, nftImage, metadataUrl);
+    public NFT createNFT(@Argument String title, @Argument String owner, @Argument String collection, @Argument String price, @Argument Integer likes, @Argument String image, @Argument String nftImage, @Argument String metadataUrl) {
+        return nftService.createNFT(title, owner, collection, price, likes, image, nftImage, metadataUrl);
     }
 
     @MutationMapping
-    public String deleteNFT(String id) {
+    public NFT updateNFT(@Argument String id, @Argument String title, @Argument String owner, @Argument String collection, @Argument String price, @Argument Integer likes, @Argument String image, @Argument String nftImage, @Argument String metadataUrl) {
+        return nftService.updateNFT(id, title, owner, collection, price, likes, image, nftImage, metadataUrl);
+    }
+
+    @MutationMapping
+    public String deleteNFT(@Argument String id) {
         return nftService.deleteNFT(id);
     }
 }

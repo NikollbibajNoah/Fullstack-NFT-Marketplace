@@ -20,8 +20,8 @@ CREATE TABLE nft (
     owner VARCHAR(255) NOT NULL,
     collection VARCHAR(255),
     price VARCHAR(50),
+    likes INT DEFAULT 0,
     image VARCHAR(255),
     nft_image VARCHAR(255),
-    metadata_url VARCHAR(255),
-    `like` INT DEFAULT 0
+    metadata_url VARCHAR(255)
 );
